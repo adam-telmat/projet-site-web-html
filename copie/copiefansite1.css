@@ -1,0 +1,161 @@
+body {
+    font-family: 'Arial', sans-serif; /* Définit la police de caractère */
+    line-height: 1.6; /* Hauteur de ligne pour le texte */
+    font-size: 1.4em; /* Augmente la taille globale du texte */
+    color: #fff; /* Couleur du texte en blanc pour le contraste */
+    background-image: url('img/faker_middle_team.jpg'), url('img/faker_team_de_dos.png'); /* Deux images de fond */
+    background-size: 100% 50%, 100% 50%; /* Chaque image couvre 100% de la largeur et 50% de la hauteur */
+    background-position: top, bottom; /* Positionne la première image en haut et la seconde en bas */
+    background-repeat: no-repeat; /* Évite la répétition des images */
+}
+
+
+
+header {
+    
+    padding: 20px; /* Espacement intérieur */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Ombre noire pour le texte */
+
+    
+    
+}
+
+h1 {
+    margin: 100px 0; /* Ajoute un espacement vertical de 20px au-dessus et en dessous du titre */
+    font-size: 2.7em; /* Augmente la taille du titre */
+    color: #bb0000; /* Rouge foncé */
+    text-align: center; /* Centre le texte du titre */
+    
+    
+}
+
+
+
+h2, h3 {
+    color: red; /* Couleur des sous-titres en rouge */
+}
+
+nav {
+    position: fixed; /* Rend la barre de navigation fixe */
+    top: 0; /* Colle la barre de navigation en haut de la page */
+    left: 0; /* Colle la barre de navigation à gauche */
+    width: 100%; /* Prend toute la largeur */
+    background-color: black; /* Couleur de fond noire pour la barre de navigation */
+    z-index: 2000; /* Assure que la barre de navigation est au-dessus d'autres éléments */
+    padding: 20px 0; /* Ajoute un espacement interne vertical */
+}
+
+nav ul {
+    list-style: none; /* Supprime les puces de la liste */
+    padding: 0; /* Supprime le padding par défaut */
+    margin: 0; /* Supprime la marge par défaut */
+}
+
+nav ul li {
+    display: inline; /* Affiche les éléments en ligne */
+    margin: 0 15px; /* Espacement horizontal entre les éléments */
+}
+
+nav a {
+    color: #fff; /* Couleur des liens en blanc */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    font-weight: bold; /* Met le texte en gras */
+}
+
+nav a:hover {
+    color: rgb(255, 0, 0); /* Couleur au survol des liens */
+}
+.logo {
+    height: 40px; /* Ajuster la hauteur du logo */
+    margin-right: 15px; /* Espacement à droite du logo */
+}
+
+
+footer {
+    text-align: center; /* Centre le texte du pied de page */
+    padding: 10px; /* Espacement autour du pied de page */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour le footer */
+    position: relative; /* Permet d'utiliser un positionnement absolu pour le contenu */
+    bottom: 0; /* Place le footer en bas */
+    width: 100%; /* Prend toute la largeur */
+}
+
+/* Ajoute un espace pour compenser la barre de navigation fixe */
+main {
+    padding-top: 80px; /* Ajuste la marge supérieure pour éviter que le contenu soit masqué par la barre de navigation */
+}
+
+.section {
+    padding: 20px; /* Espacement interne */
+    margin: 20px; /* Espacement externe */
+    border: 2px solid rgba(255, 0, 0, 0.5); /* Bordure rouge semi-transparente */
+    border-radius: 10px; /* Coins arrondis */
+    background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent pour le rectangle */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transition pour l'effet de zoom et de couleur */
+}
+
+.section:hover {
+    transform: scale(1.02); /* Zoom léger au survol */
+    background-color: rgba(255, 0, 0, 0.3); /* Change la couleur de fond au survol */
+}
+
+.contact {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin: 20px; /* Utilise la même marge que tes autres sections */
+    border: 2px solid rgba(255, 0, 0, 0.5); /* Harmonise la bordure avec les autres sections */
+    width: 100%; /* Assure une largeur cohérente */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact:hover {
+    transform: scale(1.02);
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+
+
+
+.section {
+    padding: 20px; /* Espacement interne */
+    margin: 20px; /* Espacement externe */
+    border: 2px solid rgba(255, 0, 0, 0.5); /* Bordure rouge semi-transparente */
+    border-radius: 10px; /* Coins arrondis */
+    background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent pour le rectangle */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transition pour l'effet de zoom et de couleur */
+}
+
+.section:hover {
+    transform: scale(1.02); /* Zoom léger au survol */
+    background-color: rgba(255, 0, 0, 0.3); /* Change la couleur de fond au survol */
+}
+
+.media-gallery {
+    display: flex; /* Utilise le flexbox pour l'alignement */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    justify-content: center; /* Centre uniquement la galerie de médias */
+    gap: 20px; /* Espacement entre les éléments */
+}
+
+.media-gallery img,
+.media-gallery video,
+.media-gallery iframe {
+    width: 100%; /* Prend toute la largeur */
+    max-width: 600px; /* Largeur maximale pour les images et vidéos */
+    border-radius: 10px; /* Coins arrondis des images et vidéos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère pour donner de la profondeur */
+}
+
+/* Les autres styles restent inchangés pour éviter le centrage des autres éléments */
+
+
+h2 {
+    color: red; /* Couleur du titre */
+    
+}
+
+p {
+    color: #fff; /* Couleur du texte */
+    
+}

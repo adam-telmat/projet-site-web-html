@@ -1,0 +1,221 @@
+
+
+body {
+
+    font-family: 'Arial', sans-serif; /* Définit la police de caractère */
+    line-height: 1.6; /* Hauteur de ligne pour le texte */
+    font-size: 1.4em; /* Augmente la taille globale du texte */
+    color: #fff; /* Couleur du texte en blanc pour le contraste */
+    background-image: url('img/faker_middle_team.jpg'), url('img/faker_team_de_dos.png'); /* Deux images de fond */
+    background-size: 100% 50%, 100% 50%; /* Chaque image couvre 100% de la largeur et 50% de la hauteur */
+    background-position: top, bottom; /* Positionne la première image en haut et la seconde en bas */
+    background-repeat: no-repeat; /* Évite la répétition des images */
+    margin: 0; /* Supprime les marges du body */
+    padding: 0; /* Supprime les paddings du body */
+}
+
+
+
+header {
+    
+    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Ombre noire pour le texte */
+
+}
+
+h1 {
+    margin: 100px 0; /* Ajoute un espacement vertical de 20px au-dessus et en dessous du titre */
+    font-size: 2.7em; /* Augmente la taille du titre */
+    color: #bb0000; /* Rouge foncé */
+    text-align: center; /* Centre le texte du titre */
+    
+}
+
+
+
+h2, h3 {
+
+    color: red; /* Couleur des sous-titres en rouge */
+}
+
+/* Styles pour la barre principale */
+.main-nav {
+    padding: 20px;
+    background-color: #333;
+}
+
+.main-nav ul {
+    list-style: none; /* Supprime les puces de la liste */
+    padding: 0; /* Supprime le padding par défaut */
+    margin: 0; /* Supprime la marge par défaut */
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+
+.main-nav ul li {
+    display: inline; /* Affiche les éléments en ligne */
+    margin: 0 15px; /* Espacement horizontal entre les éléments */
+}
+
+.main-nav a {
+    color: #fff; /* Couleur des liens en blanc */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    font-weight: bold; /* Met le texte en gras */
+}
+
+.main-nav a:hover {
+    color: rgb(255, 0, 0); /* Couleur au survol des liens */
+}
+
+/* Styles pour la sous-barre */
+.sub-nav {
+    background-color: #555; /* Couleur de fond différente */
+    padding: 10px; /* Ajoute un espacement autour de la sous-barre */
+    margin-top: 5px; /* Espace entre les deux barres */
+}
+
+.sub-nav ul {
+    list-style: none; /* Supprime les puces de la liste */
+    padding: 0; /* Supprime le padding par défaut */
+    margin: 0; /* Supprime la marge par défaut */
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+
+.sub-nav ul li {
+    display: inline; /* Affiche les éléments en ligne */
+    margin: 0 15px; /* Espacement horizontal entre les éléments */
+}
+
+.sub-nav a {
+    color: #fff; /* Couleur des liens en blanc */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    font-weight: bold; /* Met le texte en gras */
+}
+
+.sub-nav a:hover {
+    color: rgb(255, 0, 0); /* Couleur au survol des liens */
+}
+
+/* Style pour le logo de la sous-barre */
+.sub-nav .logo {
+    height: 40px; /* Ajuste la hauteur du logo */
+    margin-right: 15px; /* Espacement à droite du logo */
+}
+
+
+
+
+footer {
+    text-align: center; /* Centre le texte du pied de page */
+    padding: 10px; /* Espacement autour du pied de page */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour le footer */
+    position: relative; /* Position normale */
+    margin-top: 20px; /* Ajuste l'espacement au-dessus si nécessaire */
+    
+}
+
+
+
+main {
+    padding-top: 80px; /* Ajuste la marge supérieure pour éviter que le contenu soit masqué par la barre de navigation */
+}
+
+.contact {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin: 20px; /* Utilise la même marge que tes autres sections */
+    border: 2px solid rgba(255, 0, 0, 0.5); /* Harmonise la bordure avec les autres sections */
+    width: 100%; /* Assure une largeur cohérente */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact:hover {
+    transform: scale(1.02);
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+
+
+
+.section {
+    padding: 20px; /* Espacement interne */
+    margin: 20px; /* Espacement externe */
+    border: 2px solid rgba(255, 0, 0, 0.5); /* Bordure rouge semi-transparente */
+    border-radius: 10px; /* Coins arrondis */
+    background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent pour le rectangle */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transition pour l'effet de zoom et de couleur */
+}
+
+.section:hover {
+    transform: scale(1.02); /* Zoom léger au survol */
+    background-color: rgba(255, 0, 0, 0.3); /* Change la couleur de fond au survol */
+}
+
+.media-gallery {
+    display: flex; /* Utilise le flexbox pour l'alignement */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    justify-content: center; /* Centre uniquement la galerie de médias */
+    gap: 20px; /* Espacement entre les éléments */
+}
+
+.media-gallery img,
+.media-gallery video,
+.media-gallery iframe {
+    width: 100%; /* Prend toute la largeur */
+    max-width: 600px; /* Largeur maximale pour les images et vidéos */
+    border-radius: 10px; /* Coins arrondis des images et vidéos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère pour donner de la profondeur */
+}
+
+/* Les autres styles restent inchangés pour éviter le centrage des autres éléments */
+
+
+h2 {
+    color: red; /* Couleur du titre */
+    
+}
+
+p {
+    color: #fff; /* Couleur du texte */
+    
+}
+
+/* Styles spécifiques aux appareils mobiles */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.2em; /* Réduit la taille de la police pour mobile */
+        padding: 10px; /* Ajoute du padding pour éviter que le contenu touche les bords */
+        height: 75vh;
+
+    }
+
+    header {
+        text-align: center; /* Centre le texte dans l'en-tête sur mobile */
+    }
+
+    nav ul {
+        display: block; /* Change l'affichage de la navigation en bloc pour mobile */
+        text-align: center; /* Centre les éléments de navigation */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Espacement vertical entre les éléments de navigation */
+    }
+
+    .section {
+        margin: 10px; /* Réduit la marge des sections sur mobile */
+        padding: 15px; /* Ajuste le padding pour plus de confort */
+    }
+
+    .media-gallery {
+        flex-direction: column; /* Change la direction de la galerie en colonne sur mobile */
+        align-items: center; /* Centre les éléments de la galerie */
+    }
+
+    .media-gallery img {
+        width: 90%; /* Réduit la largeur des images à 90% de l'écran */
+        max-width: none; /* Supprime la largeur maximale */
+    }
+}

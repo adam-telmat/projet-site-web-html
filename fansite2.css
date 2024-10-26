@@ -1,0 +1,180 @@
+body{
+    background-image: url(imag/JamesDunk.png);
+   background-position: center center;
+   background-size: cover;
+}
+
+
+header {
+   display: flex;
+   justify-content: space-between; /* Aligne les éléments sur l'axe horizontal */
+   align-items: center; /* Centre verticalement les éléments */
+   padding: 10px 20px;
+   background-color: #333;
+ }
+
+ .logo img {
+   height: 50px;
+ }
+
+ nav ul {
+   list-style-type: none;
+   display: flex;
+   gap: 20px;
+ }
+
+ nav ul li a {
+   color: white;
+   text-decoration: none;
+   font-size: 16px;
+ }
+
+ nav ul li a:hover {
+   text-decoration: underline;
+ }
+
+ /* Alignement Responsive */
+ @media (max-width: 768px) {
+   header {
+     flex-direction: column;
+   }
+
+   nav ul {
+     flex-direction: column;
+     align-items: center;
+   }
+ }
+
+
+
+/* Style global du corps de la page */
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #eae715;
+   color: #d906fa;
+}
+
+
+/* Header */
+/* couleur en-tête mauve et Lebron en noir */
+header {
+   background-color: #f404f8;
+   color: #070707;
+   padding: 20px 0;
+   text-align: center;
+}
+/*size police lebron  */
+header h1 {
+   margin: 0;
+   font-size: 2.5em;
+}
+
+
+header nav ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+
+header nav ul li {
+   display: inline-block;
+   margin-right: 20px;
+}
+
+
+header nav ul li a {
+   color: rgb(137, 145, 138);
+   text-decoration: none;
+   font-size: 1.2em;
+}
+
+
+header nav ul li a:hover {
+   text-decoration: underline;
+}
+
+
+.photo-container {
+   display: flex;
+   justify-content: center; /* Centre les photos horizontalement */
+   gap: 10px; /* Espace entre les photos */
+ }
+
+ .photo-container img {
+   width: 300px;
+   height: auto;
+ }
+/* Contenu principal */
+.container {
+   max-width: 1200px;
+   margin: 20px auto;
+   padding: 20px;
+   /* background-color: white; */
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Section de célébrité dans index.html */
+.celebrity {
+   margin-bottom: 20px;
+}
+
+
+/* Style des sections de fansite1.html */
+section {
+   margin-bottom: 30px;
+}
+
+
+/* couleur des titres développés */
+section h3 {
+   color: #f9f504;
+}
+
+
+/* Formulaire */
+form {
+   display: flex;
+   flex-direction: column;
+}
+
+
+form label, form input, form textarea {
+   margin-bottom: 10px;
+   font-size: 1.1em;
+}
+
+
+button {
+   padding: 15px;
+   background-color: #fe05ee;
+   color: rgb(246, 250, 1);
+   border: none;
+   cursor: pointer;
+}
+
+
+/* nuance de couleur jaune/mauve barre du bas */
+button:hover {
+   background-color: #ffffff;
+}
+
+
+/* Footer */
+/* couleur mauve peid de page et couleur jaune lettre */
+footer {
+   background-color: #fe05ee;
+   color: rgb(255, 247, 0);
+   text-align: center;
+   padding: 10px 0;
+   position: relative;
+   bottom: 0;
+   width: 100%;
+}
+
+
+
+

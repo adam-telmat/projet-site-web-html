@@ -1,0 +1,54 @@
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Styles pour les sections */
+section {
+    margin: 20px;
+}
+
+/* Styles pour les conteneurs flex */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligne le texte en haut */
+}
+
+/* Styles pour les galeries d'images */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Ajoute un espace au-dessus de la galerie */
+    text-align: center; /* Centre les images si nécessaire */
+}
+
+.image-gallery img {
+    width: 300px; /* Fixe la largeur à 300px pour les deux images */
+    height: auto; /* Assure que l'image garde ses proportions */
+    margin: 20px; /* Ajoute un espace autour de chaque image */
+    border-radius: 10px; /* Optionnel : arrondit les coins des images */
+}
