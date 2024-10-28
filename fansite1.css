@@ -1,221 +1,227 @@
-
-
+/* --- Style du corps --- */
 body {
-
-    font-family: 'Arial', sans-serif; /* Définit la police de caractère */
+    font-family: 'Arial', sans-serif; /* Police de caractère */
     line-height: 1.6; /* Hauteur de ligne pour le texte */
-    font-size: 1.4em; /* Augmente la taille globale du texte */
-    color: #fff; /* Couleur du texte en blanc pour le contraste */
-    background-image: url('img/faker_middle_team.jpg'), url('img/faker_team_de_dos.png'); /* Deux images de fond */
-    background-size: 100% 50%, 100% 50%; /* Chaque image couvre 100% de la largeur et 50% de la hauteur */
-    background-position: top, bottom; /* Positionne la première image en haut et la seconde en bas */
-    background-repeat: no-repeat; /* Évite la répétition des images */
-    margin: 0; /* Supprime les marges du body */
-    padding: 0; /* Supprime les paddings du body */
+    font-size: 1.4em; /* Taille globale du texte */
+    color: #fff; /* Couleur du texte */
+    background-image: url('img/faker_middle_team.jpg'), url('img/faker_team_de_dos.png'); /* Images de fond */
+    background-size: 100% 50%, 100% 50%; /* Couverture des images */
+    background-position: top, bottom; /* Position des images */
+    background-repeat: no-repeat; /* Pas de répétition */
+    margin: 0; /* Supprime les marges */
+    padding: 0; /* Supprime les paddings */
 }
 
-
-
+/* --- Styles de l'en-tête --- */
 header {
-    
-    
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Ombre noire pour le texte */
-
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Ombre pour le texte */
 }
 
+/* --- Styles pour les titres --- */
 h1 {
-    margin: 100px 0; /* Ajoute un espacement vertical de 20px au-dessus et en dessous du titre */
-    font-size: 2.7em; /* Augmente la taille du titre */
-    color: #bb0000; /* Rouge foncé */
-    text-align: center; /* Centre le texte du titre */
-    
+    margin: 140px 0; /* Espacement vertical */
+    font-size: 2.7em; /* Taille du titre */
+    color: #bb0000; /* Couleur du titre */
+    text-align: center; /* Centre le texte */
 }
-
-
 
 h2, h3 {
-
-    color: red; /* Couleur des sous-titres en rouge */
+    color: red; /* Couleur des sous-titres */
 }
 
-/* Styles pour la barre principale */
+/* --- Styles pour la navigation principale --- */
 .main-nav {
-    padding: 20px;
-    background-color: #333;
+    position: fixed; /* Barre fixe */
+    top: 0; /* Position en haut */
+    left: 0; /* Position à gauche */
+    width: 100%; /* Largeur totale */
+    padding: 10px; /* Espacement interne */
+    background-color: #000; /* Couleur de fond */
+    z-index: 2000; /* Priorité au-dessus des autres éléments */
 }
 
-.main-nav ul {
-    list-style: none; /* Supprime les puces de la liste */
-    padding: 0; /* Supprime le padding par défaut */
-    margin: 0; /* Supprime la marge par défaut */
-    display: flex;
-    justify-content: center; /* Centre les éléments horizontalement */
-}
-
-.main-nav ul li {
-    display: inline; /* Affiche les éléments en ligne */
-    margin: 0 15px; /* Espacement horizontal entre les éléments */
-}
-
-.main-nav a {
-    color: #fff; /* Couleur des liens en blanc */
-    text-decoration: none; /* Supprime le soulignement des liens */
-    font-weight: bold; /* Met le texte en gras */
-}
-
-.main-nav a:hover {
-    color: rgb(255, 0, 0); /* Couleur au survol des liens */
-}
-
-/* Styles pour la sous-barre */
-.sub-nav {
-    background-color: #555; /* Couleur de fond différente */
-    padding: 10px; /* Ajoute un espacement autour de la sous-barre */
-    margin-top: 5px; /* Espace entre les deux barres */
-}
-
+.main-nav ul,
 .sub-nav ul {
-    list-style: none; /* Supprime les puces de la liste */
-    padding: 0; /* Supprime le padding par défaut */
-    margin: 0; /* Supprime la marge par défaut */
-    display: flex;
-    justify-content: center; /* Centre les éléments horizontalement */
+    list-style: none; /* Pas de puces */
+    padding: 0; /* Pas de padding */
+    margin: 0; /* Pas de marge */
+    display: flex; /* Flexbox pour l'alignement */
+    justify-content: center; /* Centre les éléments */
 }
 
+.main-nav ul li,
 .sub-nav ul li {
-    display: inline; /* Affiche les éléments en ligne */
-    margin: 0 15px; /* Espacement horizontal entre les éléments */
+    margin: 0 15px; /* Espacement horizontal */
 }
 
+.main-nav a,
 .sub-nav a {
-    color: #fff; /* Couleur des liens en blanc */
-    text-decoration: none; /* Supprime le soulignement des liens */
-    font-weight: bold; /* Met le texte en gras */
+    color: #fff; /* Couleur des liens */
+    text-decoration: none; /* Pas de soulignement */
+    font-weight: bold; /* Texte en gras */
 }
 
+.main-nav a:hover,
 .sub-nav a:hover {
-    color: rgb(255, 0, 0); /* Couleur au survol des liens */
+    color: rgb(255, 0, 0); /* Couleur au survol */
 }
 
-/* Style pour le logo de la sous-barre */
+/* --- Styles pour la sous-barre --- */
+.sub-nav {
+    position: fixed; /* Barre fixe */
+    top: 50px; /* Position sous la barre principale */
+    left: 0; /* Position à gauche */
+    width: 100%; /* Largeur totale */
+    padding: 5px 0; /* Espacement interne vertical */
+    background-color: black; /* Couleur de fond */
+    z-index: 1999; /* Moins que la barre principale */
+}
+
+/* Logo dans la sous-barre */
 .sub-nav .logo {
-    height: 40px; /* Ajuste la hauteur du logo */
-    margin-right: 15px; /* Espacement à droite du logo */
+    height: 40px; /* Hauteur du logo */
+    margin-right: 15px; /* Espacement à droite */
 }
 
-
-
-
-footer {
-    text-align: center; /* Centre le texte du pied de page */
-    padding: 10px; /* Espacement autour du pied de page */
-    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour le footer */
-    position: relative; /* Position normale */
-    margin-top: 20px; /* Ajuste l'espacement au-dessus si nécessaire */
-    
-}
-
-
-
+/* --- Styles pour le contenu principal --- */
 main {
-    padding-top: 80px; /* Ajuste la marge supérieure pour éviter que le contenu soit masqué par la barre de navigation */
+    padding-top: 55px; /* Espacement pour éviter le masquage par la barre de navigation */
 }
 
-.contact {
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    margin: 20px; /* Utilise la même marge que tes autres sections */
-    border: 2px solid rgba(255, 0, 0, 0.5); /* Harmonise la bordure avec les autres sections */
-    width: 100%; /* Assure une largeur cohérente */
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.contact:hover {
-    transform: scale(1.02);
-    background-color: rgba(255, 0, 0, 0.3);
-}
-
-
-
-
+/* --- Styles pour les sections --- */
 .section {
-    padding: 20px; /* Espacement interne */
-    margin: 20px; /* Espacement externe */
-    border: 2px solid rgba(255, 0, 0, 0.5); /* Bordure rouge semi-transparente */
+    padding: 55px; /* Espacement interne */
+    margin: 30px; /* Espacement externe */
+    border: 2px solid rgba(255, 0, 0, 0.5); /* Bordure semi-transparente */
     border-radius: 10px; /* Coins arrondis */
-    background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent pour le rectangle */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Transition pour l'effet de zoom et de couleur */
+    background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+    transition: transform 0.7s ease, background-color 0.7s ease; /* Transition pour les effets */
+}
+
+.section:first-of-type {
+    margin-top: 185px; /* Espacement pour la première section */
 }
 
 .section:hover {
-    transform: scale(1.02); /* Zoom léger au survol */
-    background-color: rgba(255, 0, 0, 0.3); /* Change la couleur de fond au survol */
+    transform: scale(1.02); /* Zoom au survol */
+    background-color: rgba(255, 0, 0, 0.3); /* Changement de couleur au survol */
 }
 
+/* --- Styles pour la galerie de médias --- */
 .media-gallery {
-    display: flex; /* Utilise le flexbox pour l'alignement */
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
-    justify-content: center; /* Centre uniquement la galerie de médias */
+    display: flex; /* Flexbox pour l'alignement */
+    flex-wrap: wrap; /* Éléments passent à la ligne si nécessaire */
+    justify-content: center; /* Centre la galerie */
     gap: 20px; /* Espacement entre les éléments */
 }
 
 .media-gallery img,
 .media-gallery video,
 .media-gallery iframe {
-    width: 100%; /* Prend toute la largeur */
-    max-width: 600px; /* Largeur maximale pour les images et vidéos */
-    border-radius: 10px; /* Coins arrondis des images et vidéos */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère pour donner de la profondeur */
+    width: 100%; /* Largeur totale */
+    max-width: 600px; /* Largeur maximale */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
 }
 
-/* Les autres styles restent inchangés pour éviter le centrage des autres éléments */
-
-
-h2 {
-    color: red; /* Couleur du titre */
-    
+/* --- Couleurs pour les liens dans les sections --- */
+.liens a,
+.reseaux-sociaux a {
+    color: #71cbff; /* Couleur des liens */
+    text-decoration: none; /* Pas de soulignement */
 }
 
-p {
-    color: #fff; /* Couleur du texte */
-    
+.liens a:hover,
+.reseaux-sociaux a:hover {
+    color: #00ff15; /* Couleur au survol */
 }
 
-/* Styles spécifiques aux appareils mobiles */
+/* --- Styles pour le footer --- */
+footer {
+    background-color: #000000; /* Couleur de fond du footer */
+    padding: 10px 0; /* Ajoute du remplissage en haut et en bas */
+}
+
+.footer-nav {
+    text-align: center; /* Centre le contenu de la nav */
+}
+
+.footer-nav ul {
+    list-style-type: none; /* Supprime les puces de la liste */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime le remplissage par défaut */
+}
+
+.footer-nav li {
+    display: inline; /* Affiche les éléments sur une seule ligne */
+    margin: 0 15px; /* Espace entre les éléments */
+}
+
+.footer-nav a {
+    color: white; /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignement */
+    padding: 10px; /* Ajoute du remplissage */
+}
+
+.footer-nav a:hover {
+    color: rgb(255, 0, 0); /* Couleur au survol */
+}
+
 @media (max-width: 768px) {
+    /* --- Fond du body --- */
     body {
-        font-size: 1.2em; /* Réduit la taille de la police pour mobile */
-        padding: 10px; /* Ajoute du padding pour éviter que le contenu touche les bords */
-        height: 75vh;
+        background-color: #000 !important; /* Fond noir */
+        background-image: none; /* Supprime les images de fond */
+    }
+
+    /* --- Styles pour le titre --- */
+    h1 {
+        font-size: 5em; /* Ajuste la taille du titre pour qu'il soit plus lisible sur mobile */
+        margin: 250px 0; /* Ajuste la marge pour le titre */
+        text-align: center; /* Centre le titre */
 
     }
 
-    header {
-        text-align: center; /* Centre le texte dans l'en-tête sur mobile */
+    /* --- Styles pour la barre de navigation --- */
+    .main-nav, .sub-nav {
+        flex-direction: column; /* Affichage en colonne */
+       
+        padding: 10px; /* Réduit le padding */
     }
 
-    nav ul {
-        display: block; /* Change l'affichage de la navigation en bloc pour mobile */
-        text-align: center; /* Centre les éléments de navigation */
+    .main-nav ul, .sub-nav ul {
+        display: flex; /* Utilise flexbox pour la navigation */
+        flex-direction: column; /* Affichage en colonne */
+        align-items: center; /* Centre les éléments */
+        padding: 0; /* Supprime le padding */
+        margin: 0; /* Supprime la marge */
     }
 
-    nav ul li {
-        margin: 10px 0; /* Espacement vertical entre les éléments de navigation */
+    .main-nav ul li, .sub-nav ul li {
+        margin: 5px 0; /* Réduit l'espacement vertical entre les éléments */
     }
 
+    .main-nav a, .sub-nav a {
+        font-size: 1.2em; /* Ajuste la taille des liens */
+        padding: 10px; /* Ajoute du padding autour des liens */
+    }
+
+    /* --- Styles pour les sections --- */
     .section {
-        margin: 10px; /* Réduit la marge des sections sur mobile */
-        padding: 15px; /* Ajuste le padding pour plus de confort */
+        padding: 30px; /* Réduit l'espacement interne des sections */
+        margin: 10px; /* Réduit l'espacement externe des sections */
     }
 
+    /* --- Styles pour la galerie de médias --- */
     .media-gallery {
-        flex-direction: column; /* Change la direction de la galerie en colonne sur mobile */
-        align-items: center; /* Centre les éléments de la galerie */
-    }
-
-    .media-gallery img {
-        width: 90%; /* Réduit la largeur des images à 90% de l'écran */
-        max-width: none; /* Supprime la largeur maximale */
+        flex-direction: column; /* Affiche les médias en colonne sur petits écrans */
+        
     }
 }
+
+    
+
+
+
+
+

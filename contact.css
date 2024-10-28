@@ -1,12 +1,19 @@
+/*----------------------------------------------------------------------------------------------------------------------
+        Global Styles
+----------------------------------------------------------------------------------------------------------------------*/
+body {
+    font-family: Arial, sans-serif; /* Police de caractères principale */
+    margin: 0; /* Supprime la marge par défaut du corps */
+    padding: 0; /* Supprime le remplissage par défaut du corps */
+    color: #FFFFFF; /* Couleur de texte par défaut */
+}
 
 /*----------------------------------------------------------------------------------------------------------------------
         Header
-/*----------------------------------------------------------------------------------------------------------------------*/
+----------------------------------------------------------------------------------------------------------------------*/
 header {
-    
     padding: 20px; /* Espacement intérieur */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Ombre noire pour le texte */
-
+   
 }
 
 nav {
@@ -16,13 +23,14 @@ nav {
     width: 100%; /* Prend toute la largeur */
     background-color: black; /* Couleur de fond noire pour la barre de navigation */
     z-index: 2000; /* Assure que la barre de navigation est au-dessus d'autres éléments */
-    padding: 5px 0; /* Ajoute un espacement interne vertical */
+    padding: 10px 0; /* Ajoute un espacement interne vertical */
 }
 
 nav ul {
     list-style: none; /* Supprime les puces de la liste */
     padding: 0; /* Supprime le padding par défaut */
     margin: 0; /* Supprime la marge par défaut */
+    text-align: center; /* Centre le contenu de la liste */
 }
 
 nav ul li {
@@ -34,42 +42,92 @@ nav a {
     color: #fff; /* Couleur des liens en blanc */
     text-decoration: none; /* Supprime le soulignement des liens */
     font-weight: bold; /* Met le texte en gras */
+    font-size: 1.4em; /* Taille globale du texte */
 }
 
 nav a:hover {
     color: rgb(255, 0, 0); /* Couleur au survol des liens */
 }
-.logo {
-    height: 40px; /* Ajuster la hauteur du logo */
-    margin-right: 15px; /* Espacement à droite du logo */
-}
 
 /*----------------------------------------------------------------------------------------------------------------------
-       Main
-/*----------------------------------------------------------------------------------------------------------------------*/
+        Main Content
+----------------------------------------------------------------------------------------------------------------------*/
+main {
+    min-height: 100vh; /* Définit une hauteur minimale pour la section principale */
+}
+
 .contact {
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
+    padding: 20px; /* Espacement intérieur */
+    background-color: rgba(0, 0, 0, 0.6); /* Couleur de fond semi-transparente */
+    border-radius: 10px; /* Coins arrondis */
     margin: 20px; /* Utilise la même marge que tes autres sections */
-    border: 2px solid rgba(255, 0, 0, 0.5); /* Harmonise la bordure avec les autres sections */
-    width: 100%; /* Assure une largeur cohérente */
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: 2px solid rgba(255, 0, 0, 0.5); /* Bordure harmonisée avec les autres sections */
+    transition: transform 0.7s ease, background-color 0.7s ease; /* Transition fluide */
 }
 
 .contact:hover {
-    transform: scale(1.02);
-    background-color: rgba(255, 0, 0, 0.3);
+    transform: scale(1.02); /* Effet de zoom au survol */
+    background-color: rgba(255, 0, 0, 0.3); /* Couleur de fond au survol */
 }
 
 /*----------------------------------------------------------------------------------------------------------------------
         Footer
-/*----------------------------------------------------------------------------------------------------------------------*/
+----------------------------------------------------------------------------------------------------------------------*/
 footer {
-    text-align: center; /* Centre le texte du pied de page */
-    padding: 10px; /* Espacement autour du pied de page */
-    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour le footer */
-    position: relative; /* Permet d'utiliser un positionnement absolu pour le contenu */
-    bottom: 0; /* Place le footer en bas */
+    position: fixed; /* Fixe au bas */
+    bottom: 0; /* Colle au bas de la page */
+    left: 0; /* Colle à gauche */
     width: 100%; /* Prend toute la largeur */
+    text-align: center; /* Centre le texte */
+    font-size: 16px; /* Taille de la police du footer */
+}
+
+footer nav {
+    position: relative; /* Position normale pour la barre de navigation dans le footer */
+    background-color: rgb(0, 0, 0); /* Couleur de fond du footer */
+}
+
+footer nav a {
+    color: white; /* Couleur du texte des liens dans le footer */
+    text-decoration: none; /* Supprime le soulignement */
+    padding: 10px; /* Ajoute du remplissage */
+    font-size: 1.4em; /* Taille globale du texte */
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+        Contact Page
+----------------------------------------------------------------------------------------------------------------------*/
+#contact-page {
+    background-image: url('img/moon-7021271_1920.jpg'); /* URL de votre image de fond */
+    background-size: cover; /* L'image couvre toute la fenêtre */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Évite la répétition de l'image */
+    height: 100vh; /* Assure que le body occupe toute la hauteur de la fenêtre */
+}
+
+/*----------------------------------------------------------------------------------------------------------------------
+        Responsive Styles
+/*----------------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Change la direction des éléments de la navigation en colonne */
+        align-items: center; /* Centre les éléments de la navigation */
+    }
+
+    .contact {
+        margin: 10px; /* Réduit la marge sur les petits écrans */
+        padding: 15px; /* Ajuste le rembourrage pour une meilleure apparence */
+    }
+
+    nav a {
+        font-size: 1.2em; /* Réduit légèrement la taille des liens pour les petits écrans */
+    }
+
+    footer {
+        font-size: 14px; /* Réduit la taille de la police du footer */
+    }
+
+    footer nav a {
+        padding: 5px; /* Réduit le remplissage des liens dans le footer */
+    }
 }

@@ -1,54 +1,126 @@
-/* Styles globaux */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* ------------------------------
+   Styles globaux
+   ------------------------------ */
+   html, body {
+    height: 100%; /* Assure que html et body occupent toute la hauteur */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime le remplissage par défaut */
+    font-family: Arial, sans-serif; /* Définit la police globale */
 }
 
+/* ------------------------------
+   Styles spécifiques à la page d'accueil
+   ------------------------------ */
+body#home {
+    background-image: url('img/moon-7021271_1920.jpg'); /* Image de fond */
+    background-size: cover; /* L'image couvre toute la fenêtre */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Évite la répétition de l'image */
+    height: 100vh; /* Assure que le body occupe toute la hauteur de la fenêtre */
+}
+
+/* ------------------------------
+   Styles pour la barre de navigation
+   ------------------------------ */
 nav {
-    background-color: #333;
-    color: #fff;
-    padding: 15px;
+    position: fixed; /* Rend la barre de navigation fixe en haut de la page */
+    top: 0; /* Colle la barre de navigation en haut */
+    left: 0; /* Colle la barre de navigation à gauche */
+    width: 100%; /* Prend toute la largeur */
+    background-color: black; /* Couleur de fond noire */
+    z-index: 2000; /* Assure que la barre de navigation est au-dessus d'autres éléments */
+    padding: 10px 0; /* Ajoute un espacement interne vertical */
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    list-style: none; /* Supprime les puces de la liste */
+    padding: 0; /* Supprime le padding par défaut */
+    margin: 0; /* Supprime la marge par défaut */
+    text-align: center; /* Centre le contenu de la liste */
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    display: inline; /* Affiche les éléments en ligne */
+    margin: 0 15px; /* Espacement horizontal entre les éléments */
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+nav a {
+    color: #fff; /* Couleur des liens en blanc */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    font-weight: bold; /* Met le texte en gras */
+    font-size: 1.4em; /* Taille globale du texte */
 }
 
-/* Styles pour les sections */
+nav a:hover {
+    color: rgb(255, 0, 0); /* Couleur au survol des liens */
+}
+
+/* ------------------------------
+   Styles pour les sections
+   ------------------------------ */
 section {
-    margin: 20px;
+    margin: 55px; /* Marge autour des sections */
+    color: #FFFFFF; /* Définit le texte en blanc */
+    font-size: 18px; /* Taille de la police */
+    font-weight: bold; /* Met le texte en gras */
 }
 
-/* Styles pour les conteneurs flex */
+/* ------------------------------
+   Styles pour les conteneurs flex
+   ------------------------------ */
 .flex-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Aligne le texte en haut */
+    display: flex; /* Utilise Flexbox pour la disposition */
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: flex-start; /* Aligne les éléments en haut */
 }
 
-/* Styles pour les galeries d'images */
+/* ------------------------------
+   Styles pour les galeries d'images
+   ------------------------------ */
 .image-gallery {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px; /* Ajoute un espace au-dessus de la galerie */
-    text-align: center; /* Centre les images si nécessaire */
+    display: flex; /* Utilise Flexbox pour la galerie */
+    justify-content: center; /* Centre les images */
+    margin-top: 10px; /* Espace au-dessus de la galerie */
 }
 
 .image-gallery img {
-    width: 300px; /* Fixe la largeur à 300px pour les deux images */
+    width: 100px; /* Fixe la largeur des images */
     height: auto; /* Assure que l'image garde ses proportions */
-    margin: 20px; /* Ajoute un espace autour de chaque image */
-    border-radius: 10px; /* Optionnel : arrondit les coins des images */
+}
+
+/* ------------------------------
+   Styles pour le footer
+   ------------------------------ */
+footer nav {
+    position: relative; /* Position normale pour la barre de navigation dans le footer */
+    background-color: rgb(0, 0, 0); /* Couleur de fond noire pour le footer */
+}
+
+/* ------------------------------
+   Media Queries pour le responsive
+   ------------------------------ */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block; /* Affiche les éléments en bloc sur les petits écrans */
+        margin: 10px 0; /* Espacement vertical entre les éléments */
+    }
+
+    section {
+        margin: 20px; /* Réduit les marges des sections */
+        font-size: 16px; /* Ajuste la taille de la police */
+    }
+
+    .flex-container {
+        flex-direction: column; /* Empile les éléments verticalement sur petits écrans */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .image-gallery img {
+        width: 80px; /* Réduit la taille des images sur petits écrans */
+    }
+
+    body#home {
+        background-color: black; /* Fond noir pour les petits écrans */
+        background-image: none; /* Supprime l'image de fond */
+    }
 }
